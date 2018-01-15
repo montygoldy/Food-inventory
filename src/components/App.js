@@ -8,7 +8,7 @@ class App extends React.Component{
     return (
       <div className="main">
         <div className="menu">
-          <Header />
+          <Header tagline="My tagline of the site" />
         </div>
         <Order />
         <Inventory />
