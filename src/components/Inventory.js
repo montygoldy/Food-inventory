@@ -1,10 +1,14 @@
 import React from 'react';
 import '../css/inventory.scss';
+import AddToInventory from './AddToInventory';
 
 class Inventory extends React.Component{
   render(){
     return (
-      <p>Inventory</p>
+      <div>
+        <h2>Inventory</h2>
+        <AddToInventory />
+      </div>
     )
   }
 }

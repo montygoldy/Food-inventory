@@ -4,6 +4,14 @@ import Order from './Order';
 import Inventory from './Inventory';
 
 class App extends React.Component{
+  constructor(){
+    super();
+    this.state = {
+      items: {},
+      order: {}
+    }
+  }
+
   render(){
     return (
       <div className="main">
