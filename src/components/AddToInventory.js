@@ -16,14 +16,15 @@ class AddToInventory extends React.Component{
       image: this.image.value
     }
 
-    console.log(item);
+    this.props.addItem(item);
+    this.addForm.reset();
   }
 
   render(){
     return (
       <div>
         <h2>Add To Inventory</h2>
-        <form className="add-stock" onSubmit={this.createItem}>
+        <form ref={(input) => this.addForm = input}className="add-stock" onSubmit={this.createItem}>
           <input ref={(input) => this.name = input} type="text" placeholder="Stock Name"/>
           <input ref={(input) => this.price = input} type="text" placeholder="Stock Price"/>
           <select ref={(input) => this.status = input}>
