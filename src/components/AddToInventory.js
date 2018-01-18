@@ -15,7 +15,6 @@ class AddToInventory extends React.Component{
       desc: this.desc.value,
       image: this.image.value
     }
-
     this.props.addItem(item);
     this.addForm.reset();
   }
