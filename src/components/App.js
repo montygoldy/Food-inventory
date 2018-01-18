@@ -9,7 +9,7 @@ class App extends React.Component{
     super();
     this.addItem = this.addItem.bind(this);
     this.loadSamples = this.loadSamples.bind(this);
-    this.addToOrder  = this.addToOrder .bind(this);
+    this.addToOrder  = this.addToOrder.bind(this);
     this.state = {
       items: {},
       order: {}
@@ -49,7 +49,7 @@ class App extends React.Component{
               .map(key => <Item key={key} index={key} details={this.state.items[key]} addToOrder={this.addToOrder} />)
           }
         </ul>
-        <Order />
+        <Order items={this.state.items} order={this.state.order} />
         <Inventory addItem={this.addItem} loadSamples={this.loadSamples}/>
       </div>
     )
