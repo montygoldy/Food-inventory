@@ -9,6 +9,7 @@ class App extends React.Component{
     super();
     this.addItem = this.addItem.bind(this);
     this.loadSamples = this.loadSamples.bind(this);
+    this.addToOrder  = this.addToOrder .bind(this);
     this.state = {
       items: {},
       order: {}
@@ -28,6 +29,12 @@ class App extends React.Component{
     })
   }
 
+  addToOrder(key){
+    const order = {...this.state.order};
+    order[key] = order[key] + 1 || 1;
+    this.setState({ order })
+  }
+
   render(){
     return (
       <div className="main">
@@ -38,7 +45,8 @@ class App extends React.Component{
           {
             Object
               .keys(this.state.items)
-              .map(key => <Item key={key} details={this.state.items[key]}/>)
+              // cannot use key for add to order as it is explicit to react so need to create index just for this purpose
+              .map(key => <Item key={key} index={key} details={this.state.items[key]} addToOrder={this.addToOrder} />)
           }
         </ul>
         <Order />
