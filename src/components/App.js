@@ -4,6 +4,8 @@ import Order from './Order';
 import Inventory from './Inventory';
 import Item from "./Item";
 import sampleData from '../sample-data';
+import base from '../base';
+
 class App extends React.Component{
   constructor(){
     super();
@@ -14,6 +16,18 @@ class App extends React.Component{
       items: {},
       order: {}
     }
+  }
+
+  componentWillMount(){
+    this.ref = base.syncState(`${this.props.params.storeId}/items`, {
+      context: this,
+      state: 'items'
+    })
+  }
+
+
+  componentWillUnmount(){
+    base.removeBinding(this.ref);
   }
 
   addItem(item){
