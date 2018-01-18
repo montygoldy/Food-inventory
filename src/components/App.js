@@ -12,6 +12,7 @@ class App extends React.Component{
     this.addItem = this.addItem.bind(this);
     this.loadSamples = this.loadSamples.bind(this);
     this.addToOrder  = this.addToOrder.bind(this);
+    this.updateItem  = this.updateItem.bind(this);
     this.state = {
       items: {},
       order: {}
@@ -47,6 +48,12 @@ class App extends React.Component{
     this.setState({ items })
   }
 
+  updateItem(key, updatedItem){
+    const items = {...this.state.items};
+    items[key] = updatedItem;
+    this.setState({ items });
+  }
+
   loadSamples(){
     this.setState({
       items: sampleData
@@ -74,7 +81,7 @@ class App extends React.Component{
           }
         </ul>
         <Order items={this.state.items} order={this.state.order} params={this.props.params} />
-        <Inventory addItem={this.addItem} loadSamples={this.loadSamples}/>
+        <Inventory addItem={this.addItem} loadSamples={this.loadSamples} items={this.state.items} updateItem={this.updateItem} />
       </div>
     )
   }
