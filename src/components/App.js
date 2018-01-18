@@ -22,12 +22,22 @@ class App extends React.Component{
     this.ref = base.syncState(`${this.props.params.storeId}/items`, {
       context: this,
       state: 'items'
-    })
-  }
+    });
 
+    const localStorageRef = localStorage.getItem(`order-${this.props.params.storeId}`);
+    if(localStorageRef){
+      this.setState({
+        order: JSON.parse(localStorageRef)
+      })
+    }
+  }
 
   componentWillUnmount(){
     base.removeBinding(this.ref);
+  }
+
+  componentWillUpdate(nextProps, nextState){
+    localStorage.setItem(`order-${this.props.params.storeId}`, JSON.stringify(nextState.order));
   }
 
   addItem(item){
@@ -63,7 +73,7 @@ class App extends React.Component{
               .map(key => <Item key={key} index={key} details={this.state.items[key]} addToOrder={this.addToOrder} />)
           }
         </ul>
-        <Order items={this.state.items} order={this.state.order} />
+        <Order items={this.state.items} order={this.state.order} params={this.props.params} />
         <Inventory addItem={this.addItem} loadSamples={this.loadSamples}/>
       </div>
     )
