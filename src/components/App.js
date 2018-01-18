@@ -13,6 +13,8 @@ class App extends React.Component{
     this.loadSamples = this.loadSamples.bind(this);
     this.addToOrder  = this.addToOrder.bind(this);
     this.updateItem  = this.updateItem.bind(this);
+    this.removeItem  = this.removeItem.bind(this);
+    this.removeOrder  = this.removeOrder.bind(this);
     this.state = {
       items: {},
       order: {}
@@ -54,6 +56,18 @@ class App extends React.Component{
     this.setState({ items });
   }
 
+  removeItem(key){
+    const items = {...this.state.items};
+    items[key] = null;
+    this.setState({ items })
+  }
+
+  removeOrder(key){
+    const order = {...this.state.order};
+    delete order[key];
+    this.setState({ order });
+  }
+
   loadSamples(){
     this.setState({
       items: sampleData
@@ -80,8 +94,8 @@ class App extends React.Component{
               .map(key => <Item key={key} index={key} details={this.state.items[key]} addToOrder={this.addToOrder} />)
           }
         </ul>
-        <Order items={this.state.items} order={this.state.order} params={this.props.params} />
-        <Inventory addItem={this.addItem} loadSamples={this.loadSamples} items={this.state.items} updateItem={this.updateItem} />
+        <Order items={this.state.items} order={this.state.order} params={this.props.params} removeOrder={this.removeOrder} />
+        <Inventory addItem={this.addItem} loadSamples={this.loadSamples} items={this.state.items} updateItem={this.updateItem} removeItem={this.removeItem}/>
       </div>
     )
   }
