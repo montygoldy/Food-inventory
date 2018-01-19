@@ -1,0 +1,82 @@
+
+
+#main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+form.store-selector{
+  border:20px solid rgba(0,0,0,.4);
+  border-radius:5px;
+}
+
+form.store-selector .form_wrapper{
+  background:#FECA41;
+  padding:20px;
+}
+
+form.store-selector h2{
+  font-family: 'Merriweather', serif;
+  font-size:2.4em;
+  margin-bottom: .2em;
+}
+
+form.store-selector .store_input_group{
+  display:flex;
+  margin-bottom: 10px;
+}
+
+form.store-selector .store_input_group > *{
+  flex:1;
+}
+
+form.store-selector .store_input_group input{
+  flex-basis:50%;
+  font-size:1em;
+  font-family: 'Montserrat', sans-serif;
+  padding-left:10px;
+  background:rgba(255,255,255,.8);
+  border-top:1px solid rgba(255,255,255,.5);
+  border-bottom:1px solid rgba(255,255,255,.5);
+  border-left:1px solid rgba(255,255,255,.5);
+  border-right:none;
+  transition:all .5s;
+}
+
+form.store-selector .store_input_group input:hover{
+  background:rgba(255,255,255,1);
+  border-top:1px solid rgba(0,0,0,0.5);
+  border-bottom:1px solid rgba(0,0,0,0.5);
+  border-left:1px solid rgba(0,0,0,0.5);
+  transition:all .5s;
+}
+
+form.store-selector .store_input_group button{
+  font-family: 'Montserrat', sans-serif;
+  font-size:1.2em;
+  border:none;
+  color:#fff;
+  background:#333;
+  padding:10px 15px;
+  cursor:pointer;
+  transition:all .5s;
+}
+
+form.store-selector .store_input_group button:hover{
+  background:#F48327;
+  transition:all .5s;
+}
+
+.background-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+}
+

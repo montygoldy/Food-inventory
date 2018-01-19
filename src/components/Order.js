@@ -1,5 +1,4 @@
 import React from 'react';
-import '../css/order.scss';
 import {formatPrice} from '../helpers';
 
 class Order extends React.Component{

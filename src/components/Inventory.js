@@ -1,5 +1,4 @@
 import React from 'react';
-import '../css/inventory.scss';
 import AddToInventory from './AddToInventory';
 import base from '../base';
 
