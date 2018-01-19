@@ -84,7 +84,7 @@ class App extends React.Component{
     return (
       <div className="main">
         <div className="menu">
-          <Header tagline="My tagline of the site" />
+          <Header tagline={"My tagline of the site"} />
         </div>
         <ul className="list-of-items">
           {
@@ -99,6 +99,10 @@ class App extends React.Component{
       </div>
     )
   }
+}
+
+App.propTypes = {
+  params: React.PropTypes.object.isRequired
 }
 
 export default App;

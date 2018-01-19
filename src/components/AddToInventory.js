@@ -39,4 +39,8 @@ class AddToInventory extends React.Component{
   }
 }
 
+AddToInventory.propTypes = {
+  addItem: React.PropTypes.func.isRequired
+}
+
 export default AddToInventory;
