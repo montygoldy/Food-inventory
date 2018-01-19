@@ -95,7 +95,7 @@ class App extends React.Component{
           }
         </ul>
         <Order items={this.state.items} order={this.state.order} params={this.props.params} removeOrder={this.removeOrder} />
-        <Inventory addItem={this.addItem} loadSamples={this.loadSamples} items={this.state.items} updateItem={this.updateItem} removeItem={this.removeItem}/>
+        <Inventory addItem={this.addItem} loadSamples={this.loadSamples} items={this.state.items} updateItem={this.updateItem} removeItem={this.removeItem} storeId={this.props.params.storeId} />
       </div>
     )
   }
