@@ -84,7 +84,7 @@ class App extends React.Component{
     return (
       <div className="main">
         <div className="menu">
-          <Header tagline={"My tagline of the site"} />
+          <Header />
         </div>
         <ul className="list-of-items">
           {

@@ -7,9 +7,21 @@
   height: 100vh;
 }
 
+header.top{
+  position:absolute;
+  top:25px;
+  left:50px;
+}
+
+header.top img{
+  width: 170px;
+  height:auto;
+}
+
 form.store-selector{
   border:20px solid rgba(0,0,0,.4);
   border-radius:5px;
+  min-width:550px;
 }
 
 form.store-selector .form_wrapper{
@@ -18,9 +30,10 @@ form.store-selector .form_wrapper{
 }
 
 form.store-selector h2{
-  font-family: 'Merriweather', serif;
+  font-family: 'Fjalla One', sans-serif;
   font-size:2.4em;
   margin-bottom: .2em;
+  text-align:center;
 }
 
 form.store-selector .store_input_group{
