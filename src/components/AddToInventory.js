@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../css/inventory.css'
 
 class AddToInventory extends React.Component{
   constructor(){
@@ -24,15 +24,23 @@ class AddToInventory extends React.Component{
       <div>
         <h2>Add To Inventory</h2>
         <form ref={(input) => this.addForm = input}className="add-stock" onSubmit={this.createItem}>
-          <input ref={(input) => this.name = input} type="text" placeholder="Stock Name"/>
-          <input ref={(input) => this.price = input} type="text" placeholder="Stock Price"/>
-          <select ref={(input) => this.status = input}>
-            <option value="available">Available</option>
-            <option value="unavailable">Sold Out</option>
-          </select>
-          <textarea ref={(input) => this.desc = input} placeholder="Stock Desc"></textarea>
-          <input  ref={(input) => this.image = input} type="text" placeholder="Stock Image"/>
-          <button type="submit">Add Item</button>
+          <div className="form_control">
+            <input ref={(input) => this.name = input} type="text" placeholder="Name" required/>
+            <input ref={(input) => this.price = input} type="text" placeholder="Price" required/>
+          </div>
+          <div className="form_control">
+            <select ref={(input) => this.status = input} required>
+              <option value="available">Available</option>
+              <option value="unavailable">Sold Out</option>
+            </select>
+            <input  ref={(input) => this.image = input} type="text" placeholder="Image" required/>
+          </div>
+          <div className="form_control">
+            <textarea ref={(input) => this.desc = input} placeholder="Description" required></textarea>
+          </div>
+          <div className="form_submit">
+            <button type="submit"><i className="fa fa-plus" aria-hidden="true"></i> Add Item</button>
+          </div>
         </form>
       </div>
     )
