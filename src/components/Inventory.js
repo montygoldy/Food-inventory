@@ -118,7 +118,7 @@ class Inventory extends React.Component{
     }
 
     return (
-      <div>
+      <div className="inventory_wrapper">
         <h2>Inventory</h2>
         {logout}
         {Object.keys(this.props.items).map(this.renderInventory)}

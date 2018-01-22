@@ -81,6 +81,7 @@ form.add-stock .form_submit button{
   cursor:pointer;
   margin-top: 10px;
   transition:all .5s;
+  font-family: 'Fjalla One', sans-serif;
 }
 
 form.add-stock .form_submit button:hover{
@@ -140,24 +141,87 @@ form.add-stock input, textarea,select{
 }
 
 .item-edit textarea{
+  font-size:.9em;
   color:#F48327;
 }
 
 .remove_item{
   font-size:1.2em;
   border:none;
-  background:red;
+  background:#000;
   cursor:pointer;
   color:#fff;
   padding: 10px;
   margin: 5px;
-  border-radius: 5px;
+  font-family: 'Fjalla One', sans-serif;
   transition:all .3s;
 }
 
 .remove_item:hover{
+  background:red;
   transition:all .3s;
 }
 
+ul.list-of-items{
+  display:flex;
+}
+
+ul.list-of-items li {
+  border:1px solid #333;
+  margin: 10px;
+  background:#333;
+  position:relative;
+}
+
+ul.list-of-items li h3{
+  text-align:center;
+  background:#FECA41;
+  margin-top:-4px;
+  padding:5px 0;
+  color:#333;
+}
+
+ul.list-of-items li .data_section{
+  padding:10px;
+  display:flex;
+  flex-direction: column;
+}
+
+
+ul.list-of-items li .data_section p{
+  font-size:.8em;
+  line-height:18px;
+  color:#fff;
+}
+
+ul.list-of-items li .data_section button{
+  cursor:pointer;
+  text-align:center;
+  border:none;
+  padding:10px 15px;
+  color:#333;
+  background:#FECA41;
+  font-size:1em;
+  display: block;
+  font-family: 'Fjalla One', sans-serif;
+  transition:all .3s;
+  margin-top: 10px;
+}
+
+ul.list-of-items li .data_section button:hover{
+  background:#FECA41;
+  transition:all .3s;
+}
+
+ul.list-of-items li span.price{
+  position:absolute;
+  top:0;
+  right:0;
+  background:rgba(0,0,0,.6);
+  font-size:1.1em;
+  color:#FECA41;
+  padding:10px;
+  text-shadow:0 1px 3px rgba(0,0,0,.3);
+}
 
 
