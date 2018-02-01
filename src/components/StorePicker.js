@@ -20,23 +20,25 @@ class StorePicker extends React.Component{
 
   render(){
     return (
-      <div>
-        <Header />
+      <div className="store_wrapper">
         <div>
-          <video className="background-video" loop autoPlay>
-            <source src={Video} type="video/mp4" />
+          <Header />
+          <div>
+            <video className="background-video" loop autoPlay>
+              <source src={Video} type="video/mp4" />
 
-            Your browser does not support the video tag.
-          </video>
-          <form className="store-selector" onSubmit={this.goToStore}>
-            <div className="form_wrapper">
-              <h2>Please enter a store name</h2>
-              <div className="store_input_group">
-                <input type="text" ref={(input) => {this.storeInput = input}} placeholder="Store name" required/>
-                <button type="submit">Visit Store</button>
+              Your browser does not support the video tag.
+            </video>
+            <form className="store-selector" onSubmit={this.goToStore}>
+              <div className="form_wrapper">
+                <h2>Please enter a store name</h2>
+                <div className="store_input_group">
+                  <input type="text" ref={(input) => {this.storeInput = input}} placeholder="Store name" required/>
+                  <button type="submit">Visit Store</button>
+                </div>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     )

@@ -86,15 +86,21 @@ class App extends React.Component{
         <div className="menu">
           <Header />
         </div>
-        <ul className="list-of-items">
-          {
-            Object
-              .keys(this.state.items)
-              // cannot use key for add to order as it is explicit to react so need to create index just for this purpose
-              .map(key => <Item key={key} index={key} details={this.state.items[key]} addToOrder={this.addToOrder} />)
-          }
-        </ul>
-        <Order items={this.state.items} order={this.state.order} params={this.props.params} removeOrder={this.removeOrder} />
+        <div className="item_order_wrapper">
+          <section className="items_box">
+            <ul className="list-of-items">
+              {
+                Object
+                  .keys(this.state.items)
+                  // cannot use key for add to order as it is explicit to react so need to create index just for this purpose
+                  .map(key => <Item key={key} index={key} details={this.state.items[key]} addToOrder={this.addToOrder} />)
+              }
+            </ul>
+          </section>
+          <section className="order_box">
+            <Order items={this.state.items} order={this.state.order} params={this.props.params} removeOrder={this.removeOrder} />
+          </section>
+        </div>
         <Inventory addItem={this.addItem} loadSamples={this.loadSamples} items={this.state.items} updateItem={this.updateItem} removeItem={this.removeItem} storeId={this.props.params.storeId} />
 
       </div>

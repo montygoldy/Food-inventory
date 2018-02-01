@@ -1,13 +1,20 @@
 
 
-#main{
+.store_wrapper{
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
 }
 
+.menu header.top{
+  z-index:9999;
+  position:static;
+  margin: 30px 0 15px 40px;
+}
+
 header.top{
+  z-index:9999;
   position:absolute;
   top:25px;
   left:50px;

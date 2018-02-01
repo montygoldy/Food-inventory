@@ -20,9 +20,12 @@ class Order extends React.Component{
 
     return(
       <li key={key}>
-        <span>{count}lbs {item.name}</span>
+        <span className="count">{count}lbs </span>
+        <span className="item_name">{item.name}</span>
+        <div className="price_wrap">
+        </div>
         <span className="price">{formatPrice(count * item.price)}</span>
-        <button onClick={() => this.props.removeOrder(key)} > &times; </button>
+        <button onClick={() => this.props.removeOrder(key)} className="remove_btn"> &times; </button>
       </li>
     )
   }
@@ -45,8 +48,8 @@ class Order extends React.Component{
         <ul className="order">
           {orderIds.map(this.renderOrder)}
           <li className="total">
-            <strong>Total</strong>
-            {formatPrice(total)}
+            <strong>Total:</strong>
+            <span className="total">{formatPrice(total)}</span>
           </li>
         </ul>
       </div>
