@@ -58,8 +58,7 @@ nav.login .github{
 form.add-stock{
   border:1px solid #333;
   background: #333;
-  padding:20px;
-  min-width:500px;
+  padding:10px;
 }
 
 form.add-stock .form_control{
@@ -69,6 +68,7 @@ form.add-stock .form_control{
 form.add-stock .form_submit{
   display:flex;
   justify-content: center;
+  margin-bottom: 10px;
 }
 
 form.add-stock .form_submit button{
@@ -96,7 +96,7 @@ form.add-stock input, textarea,select{
   padding:10px 5px;
   font-family: 'Fjalla One', sans-serif;
   font-weight:normal;
-  border-radius:5px;
+  border-radius:3px;
   color:#333;
   margin: 5px;
 }
@@ -125,7 +125,7 @@ form.add-stock input, textarea,select{
   padding:5px 5px;
   font-family: 'Fjalla One', sans-serif;
   font-weight:normal;
-  border-radius:5px;
+  border-radius:3px;
   color:#F48327;
   margin: 5px;
 }
@@ -316,6 +316,21 @@ section.order_box{
   margin-left: 20px;
 }
 
+.full_wrapper{
+  display:flex;
+  width:80%;
+  margin: auto;
+  background: #F6F6F7;
+  flex-wrap:nowrap;
+}
 
+.inventory_wrapper{
+  flex: 0 0 55.5%;
+  margin: 10px;
+  width: calc(100% * (1/4) - 10px - 1px);
+}
 
+.addto_wrapper{
+  flex:0 0 29%;
+}
 

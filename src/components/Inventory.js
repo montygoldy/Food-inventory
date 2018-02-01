@@ -118,12 +118,17 @@ class Inventory extends React.Component{
     }
 
     return (
-      <div className="inventory_wrapper">
-        <h2>Inventory</h2>
-        {logout}
-        {Object.keys(this.props.items).map(this.renderInventory)}
-        <AddToInventory addItem={this.props.addItem} />
-        <button onClick={this.props.loadSamples} className="load_samples">Load Sample Items</button>
+      <div className="full_wrapper">
+        <div className="inventory_wrapper">
+          <h2>Inventory</h2>
+          {logout}
+          {Object.keys(this.props.items).map(this.renderInventory)}
+        </div>
+
+        <div className="addto_wrapper">
+          <button onClick={this.props.loadSamples} className="load_samples">Load Sample Items</button>
+          <AddToInventory addItem={this.props.addItem} />
+        </div>
       </div>
     )
   }
