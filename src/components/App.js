@@ -85,6 +85,7 @@ class App extends React.Component{
       <div className="wrapper">
         <div className="menu">
           <Header />
+          <Inventory addItem={this.addItem} loadSamples={this.loadSamples} items={this.state.items} updateItem={this.updateItem} removeItem={this.removeItem} storeId={this.props.params.storeId} />
         </div>
         <div className="item_order_wrapper">
           <section className="items_box">
@@ -101,7 +102,7 @@ class App extends React.Component{
             <Order items={this.state.items} order={this.state.order} params={this.props.params} removeOrder={this.removeOrder} />
           </section>
         </div>
-        <Inventory addItem={this.addItem} loadSamples={this.loadSamples} items={this.state.items} updateItem={this.updateItem} removeItem={this.removeItem} storeId={this.props.params.storeId} />
+
 
       </div>
     )

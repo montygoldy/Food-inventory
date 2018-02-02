@@ -109,7 +109,7 @@ class Inventory extends React.Component{
     const logout = <button onClick={this.logout} className="logout">Log Out!</button>
 
     if(!this.state.uid){
-      return <div>{this.renderLogin()}</div>
+      return <div className="sign_in">{this.renderLogin()}</div>
     }
 
     if(this.state.uid !== this.state.owner){
@@ -121,13 +121,13 @@ class Inventory extends React.Component{
       <div className="full_wrapper">
         <div className="inventory_wrapper">
           <h2>Inventory</h2>
-          {logout}
           {Object.keys(this.props.items).map(this.renderInventory)}
         </div>
 
         <div className="addto_wrapper">
-          <button onClick={this.props.loadSamples} className="load_samples">Load Sample Items</button>
           <AddToInventory addItem={this.props.addItem} />
+          <button onClick={this.props.loadSamples} className="load_samples">Load Sample Items</button>
+          {logout}
         </div>
       </div>
     )

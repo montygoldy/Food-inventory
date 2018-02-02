@@ -1,3 +1,12 @@
+.social_icons{
+  position:absolute;
+  top:14%;
+  right:10%;
+  z-index:999;
+  background:#F6F6F7;
+  padding:10px;
+}
+
 nav.login h3{
   font-size:1em;
   font-family: 'Fjalla One', sans-serif;
@@ -30,7 +39,10 @@ nav.login .facebook, .twitter, .github{
   font-family: 'Montserrat', sans-serif;
   font-size:1em;
   color:#fff;
+  margin-bottom: 10px;
+  display:block;
   cursor:pointer;
+  width: 230px;
 }
 
 nav.login .facebook{
@@ -318,19 +330,25 @@ section.order_box{
 
 .full_wrapper{
   display:flex;
-  width:80%;
   margin: auto;
   background: #F6F6F7;
   flex-wrap:nowrap;
+  margin-top: 20px;
 }
 
 .inventory_wrapper{
-  flex: 0 0 55.5%;
+  flex: 0 0 57.5%;
   margin: 10px;
   width: calc(100% * (1/4) - 10px - 1px);
 }
 
+.inventory_wrapper h2, .addto_wrapper h2{
+  margin-bottom: 10px;
+}
+
 .addto_wrapper{
   flex:0 0 29%;
+  margin-top: 10px;
+
 }
 

@@ -7,10 +7,22 @@
   height: 100vh;
 }
 
+.menu {
+  width: 80%;
+  margin:10px auto;
+}
+
+.menu .sign_in{
+  float:right;
+  margin-top: 10px;
+
+}
+
 .menu header.top{
   z-index:9999;
   position:static;
-  margin: 30px 0 15px 40px;
+  margin: 5px 0 10px 0;
+  float:left;
 }
 
 header.top{
