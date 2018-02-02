@@ -1,10 +1,21 @@
 .social_icons{
   position:absolute;
-  top:14%;
-  right:10%;
+  top:73px;
+  right:5%;
   z-index:999;
   background:#F6F6F7;
   padding:10px;
+}
+
+button:disabled{
+  background: red!important;
+  color:#fff!important;
+  border:3px solid red!important;
+  font-size:1.5em!important;
+  transform: rotate(-0.07turn);
+  position:absolute;
+  bottom:20%;
+  left:15%;
 }
 
 nav.login h3{
@@ -350,5 +361,8 @@ section.order_box{
   flex:0 0 29%;
   margin-top: 10px;
 
+}
+.wrapper{
+  background:#333;
 }
 

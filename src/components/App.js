@@ -5,6 +5,11 @@ import Inventory from './Inventory';
 import Item from "./Item";
 import sampleData from '../sample-data';
 import base from '../base';
+import Food from  "../css/images/food.png";
+
+let styles = {
+  backgroundImage: 'url('+Food+')'
+};
 
 class App extends React.Component{
   constructor(){
@@ -82,7 +87,7 @@ class App extends React.Component{
 
   render(){
     return (
-      <div className="wrapper">
+      <div className="wrapper" style={styles}>
         <div className="menu">
           <Header />
           <Inventory addItem={this.addItem} loadSamples={this.loadSamples} items={this.state.items} updateItem={this.updateItem} removeItem={this.removeItem} storeId={this.props.params.storeId} />

@@ -9,20 +9,23 @@
 
 .menu {
   width: 80%;
-  margin:10px auto;
+  margin:auto;
+  padding:10px 0;
+  overflow:hidden;
+  background: #F6F6F7;
 }
 
 .menu .sign_in{
-  float:right;
-  margin-top: 10px;
-
+  position:absolute;
+  top:20px;
+  right:11%;
 }
 
 .menu header.top{
   z-index:9999;
   position:static;
   margin: 5px 0 10px 0;
-  float:left;
+  padding-left: 10px;
 }
 
 header.top{
