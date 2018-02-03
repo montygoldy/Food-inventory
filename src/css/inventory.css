@@ -58,7 +58,6 @@ nav.login .facebook, .twitter, .github{
 
 nav.login .facebook{
   background:#4468B0;
-  margin-right: 20px;
   transition:all .3s;
 }
 
@@ -69,7 +68,6 @@ nav.login .facebook:hover, nav.login .twitter:hover, nav.login .github:hover{
 
 nav.login .twitter{
   background:#2AA3EF;
-  margin-right: 20px;
   transition:all .3s;
 }
 
@@ -365,4 +363,68 @@ section.order_box{
 .wrapper{
   background:#333;
 }
+
+@media (min-width: 450px) and (max-width: 576px){
+  .menu header.top{
+    padding: 0;
+    text-align:center;
+  }
+
+  .menu .sign_in{
+    position:static!important;
+    text-align: center;
+
+  }
+
+  button#sign_in{
+    display:initial;
+  }
+
+  .social_icons{
+    top: 161px;
+    right: 11%;
+  }
+
+  .item_order_wrapper{
+    flex-direction: column;
+  }
+
+  ul.list-of-items li{
+    min-width:170px;
+    flex-grow: 0;
+  }
+
+  button:disabled{
+    font-size:1.2em!important;
+  }
+
+  section.order_box{
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+
+  .full_wrapper{
+    flex-direction: column;
+  }
+
+  .addto_wrapper{
+    order:-1;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .inventory_wrapper{
+    margin-top: 30px;
+    width: 95%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  form.add-stock input{
+    width:100%;
+  }
+}
+
+
+
 

@@ -115,3 +115,13 @@ form.store-selector .store_input_group button:hover{
   z-index: -100;
 }
 
+@media (min-width: 450px) and (max-width: 576px){
+  form.store-selector {
+    min-width:420px;
+  }
+
+  form.store-selector .store_input_group button{
+    font-size:.9em;
+  }
+}
+
