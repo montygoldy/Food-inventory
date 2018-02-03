@@ -1,6 +1,6 @@
 # StoreMaker
 
-### Live Link: [link](http://storemaker.surge.sh)
+### Live Link: [Click HERE!!!](http://storemaker.surge.sh)
 
 ### Screenshot
 
