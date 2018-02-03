@@ -1,5 +1,7 @@
 # StoreMaker
 
+### Live Link: [link](http://storemaker.surge.sh)
+
 ### Screenshot
 
 !["Screenshot of Homepage"](https://github.com/montygoldy/Food-inventory/blob/master/docs/Screen%20Shot%202018-02-01%20at%2011.47.26%20PM.png?raw=true)
